@@ -1,0 +1,86 @@
+% set some KOMA-Options
+\setkomafont{pageheadfoot}{}	% plain text in pageheadfoot
+
+% fix LaTeX2e
+\usepackage{fixltx2e}
+% warning for compiling
+\usepackage[aux]{rerunfilecheck}
+
+% set language
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+% math tools
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% font packages
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+
+\usepackage[
+	math-style=ISO,
+	bold-style=ISO,
+	sans-style=italic,
+	nabla=upright,
+	partial=upright,
+]{unicode-math}
+
+\setmathfont{Latin Modern Math}
+\setmathfont[range={\mathscr, \mathbfscr}]{XITS Math}
+
+% correct quotes
+\usepackage[autostyle]{csquotes}
+
+% numbers and units
+\usepackage[
+	locale=DE,			% locale selection
+	separate-uncertainty=true,	% errors with \pm
+	per-mode=symbol-or-fraction,	% m/s in text, factions elsewise
+]{siunitx}
+
+% nice fractions in text
+\usepackage{xfrac}
+
+% nice captions
+\usepackage[
+	labelfont=bf,		% bold captions
+	font=small,		% smaller font as in document
+	width=0.9\textwidth,	% reduce maximal caption width
+]{caption}
+
+% subfigure, subtable, subref
+\usepackage{subcaption}
+
+% use graphics in document
+\usepackage{graphicx}
+
+% nice tables
+\usepackage{booktabs}
+
+% bibliography
+\usepackage[
+	maxnames=8,		% maximal 8 authors cited
+	minnames=3,		% minimal 3 authors cited
+	maxalphanames=1,	% only first author in label
+	style=alphabetic,	% alphabetic style
+]{biblatex}
+\renewcommand*{\labelalphaothers}{}		% rm + sign after citation
+						% for multiple authors
+\renewcommand*{\mkbibnamelast}[1]{\textsc{#1}}	% last name in small caps
+
+\addbibresource{tex/lit.bib}
+
+% package to create blindtext
+\usepackage{blindtext}
+
+% hyperlinks in document
+\usepackage[
+	unicode,
+	pdfusetitle,
+	pdfcreator={},
+	pdfproducer={},
+]{hyperref}
+% bookmarks in pdf
+\usepackage{bookmark}

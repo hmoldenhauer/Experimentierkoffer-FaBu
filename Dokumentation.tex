@@ -1,0 +1,44 @@
+\documentclass[
+	bibliography=totoc,	% bibliography to table of contents
+	captions=tableheading,	% captions on top of tables
+	titlepage=firstiscover,	% titlepage
+	twoside,		% tow sided layout
+	headsepline=true,	% add a head separation line
+]{scrbook}
+
+\input{tex/header.tex}
+
+\title{Experimentierkoffer des Familienbundes}
+\date{Dokumentation}
+\publishers{
+	Anleitungen, Hintergründe und\\
+	ausführliche Erklärungen zum\\[1.5em]
+	Experimentierkoffer\\[1.5em]
+	des Familienbundes Paderborn\\[5em]
+	von\\[1em]
+	Henning Moldenhauer\\[1.5em]
+	Dortmund, Dezember 2014
+}
+\lowertitleback{
+	%1. reviewer:\\[1em]
+	%2. reviewer:\\[2em]
+	Stand vom: 07. Dezember 2014
+}
+
+\begin{document}
+\pagenumbering{Roman}
+\maketitle
+\tableofcontents
+\newpage
+
+\setcounter{page}{0}
+\pagenumbering{arabic}
+\input{content/01-Einleitung.tex}
+\input{content/02-Versuche-mit-Feuer.tex}
+\input{content/03-Elektrisches.tex}
+\input{content/04-Luft-und-Schall.tex}
+
+\newpage
+\printbibliography
+
+\end{document}
