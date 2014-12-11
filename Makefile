@@ -1,6 +1,6 @@
 all: Dokumentation.pdf
 
-Dokumentation.pdf: Dokumentation.tex content/*.tex tex/*
+Dokumentation.pdf: Dokumentation.tex content/* tex/*
 	mkdir -p build
 	TEXINPUTS=build:.: lualatex --output-directory=build Dokumentation.tex
 	BIBINPUTS=build:.  biber build/Dokumentation.bcf
