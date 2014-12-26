@@ -1,3 +1,4 @@
 build/*
 Dokumentation.pdf
 *.swp
+Makefile
